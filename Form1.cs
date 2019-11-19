@@ -18,7 +18,10 @@ namespace Control_by_Task
 			await Task.Run(() =>
 			{
 				Count++;
-				this.Invoke((Action)(() => label1.Text = Count.ToString()));
+				this.Invoke((Action)(() =>
+				{
+					label1.Text = Count.ToString();
+				}));
 			});
 		}
 	}
